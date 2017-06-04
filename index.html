@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>myMap</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">My Map</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="col-md-2">
+                    <input type="text" class="form-control" id="departures" placeholder="Votre départ" />
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" id="arrival" placeholder="Votre arrivée" />
+                </div>
+                <!--<div class="col-md-2">-->
+                    <!--<input type="checkbox" name="checkpoint" value="museum"> Museum<br>-->
+                    <!--<input type="checkbox" name="checkpoint" value="amusement_park"> Amusement Park<br>-->
+                    <!--<input type="checkbox" name="checkpoint" value="food"> Food<br>-->
+                <!--</div>-->
+
+                <div class="col-md-2">
+                    <select multiple id="checkpoint" class="form-control">
+                        <option value="default">default</option>
+                        <option value="museum">museum</option>
+                        <option value="amusement_park">Amusement_park</option>
+                        <option value="food">food</option>
+                        <option value="park">park</option>
+                    </select>
+                </div>
+
+                <div class="col-md-2">
+                    <select id="travel-mode" class="form-control">
+                        <option value="driving">Driving</option>
+                        <option value="bicycling">Bicycling</option>
+                        <option value="transit">Transit</option>
+                        <option value="walking">Walking</option>
+                    </select>
+                </div>
+                <button id="search" class="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="maps"></div>
+    <div id="map_way_info"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZl7a3LZhe0-R0PDmuCJpwFCbmgYFUTfo&callback=initMap&libraries=places"></script>
+
+</body>
+</html>

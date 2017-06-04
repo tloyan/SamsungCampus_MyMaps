@@ -1,0 +1,24 @@
+body {
+    padding:80px;
+    overflow-x: hidden;
+}
+
+#maps {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+#map_way_info {
+    width: 1050px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form-control{
+    margin-top: 10px;
+}
+.button{
+    margin-top: 10px;
+    height: 35px;
+}
